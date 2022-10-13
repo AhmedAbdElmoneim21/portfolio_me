@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link rel="stylesheet" href="CSS/all.min.css" />
+    <link rel="stylesheet" href="/CSS/normalize.css" />
+    <link rel="stylesheet" href="CSS/swiper-bundle.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+      <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+    <link rel="icon" href="Images/3transpaper1_.png" type="3transpaper1_.png">
+    <title>Ahmed Abd Elmoneim</title>
+  </head>
+  <body>
+    <audio id="pap" src="paplo.mp3"></audio>
+    <div id="loading"></div>
+    <button class="up"><i class="fa-solid fa-angles-up"></i></button>
+    <div class="nav-toggle" id="nav-toggle">
+        <i class="fa-sharp fa-solid fa-bars"></i>
+    </div>
+    <aside class="slidebar" id="slidebar">
+      <nav class="nav">
+        <div class="nav-logo">
+         <img src="Images/شسيشسي.svg" alt="">
+        </div>
+        <div class="nav-menu">
+          <div class="menu">
+            <ul class="nav-list">
+              <li class="nav-item">
+                <a href="#home" class="nav-link active-link">Home</a>
+              </li>
+              <li class="nav-item">
+                <a href="#about" class="nav-link">About</a>
+              </li>
+              <li class="nav-item">
+                <a href="#skills" class="nav-link">Skills</a>
+              </li>
+              <li class="nav-item">
+                <a href="#work" class="nav-link">Works</a>
+              </li>
+              <li class="nav-item">
+                <a href="#services" class="nav-link">Services</a>
+              </li>
+              <!-- <li class="nav-item">
+                <a href="#Certificates" class="nav-link">Certificates</a>
+              </li> -->
+              <li class="nav-item">
+                <a href="#contact" class="nav-link">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="btn-share">
+          <i class="fa-solid fa-share-nodes"></i>
+        </div>
+        <div class="nav-close" id="nav-close">
+        <i class="fa-sharp fa-solid fa-xmark"></i>
+        </div>
+      </nav>
+    </aside>
+    <main class="main">
+      <section class="home" id="home">
+        <div class="home-container container grid">
+          <div class="home-social">
+            <span class="home-social-follow">Follow Me</span>
+            <div class="home-social-links">
+              <a
+                href="https://www.facebook.com/ahmedabdalmanaem2"
+                target="_blank"
+                class="home-social-link"
+                ><i class="fa-brands fa-facebook"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/ahmedabdelmoneim19/"
+                target="_blank"
+                class="home-social-link"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+              <a
+                href="https://www.behance.net/"
+                target="_blank"
+                class="home-social-link"
+              >
+                <i class="fa-brands fa-behance"></i
+              ></a>
+              <a
+                href="https://github.com/AhmedAbdElmoneim21"
+                target="_blank"
+                class="home-social-link"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+            </div>
+          </div>
+          <img src="Images/3transpaper1_.png" alt="" class="home-img" />
+          <div class="home-data">
+            <h1 class="home-title"></h1>
+            <h3 class="home-subtitle">UI-UX Design and Front-End developer</h3>
+            <p class="home-description">
+              I have good knowledge in web design, interfaces and user
+              experience
+            </p>
+              <a
+                href="Ahmed Abd Elmoneim Mohamed Abd Elmoneim.pdf"
+                class="button" target="_blank"
+                ><i class="fa-solid fa-download  button-icon"></i>Download CV</a
+              >
+          </div>
+          <div class="my-info">
+            <!-- <div class="info-item">
+              <i class="fa-brands fa-facebook-messenger info-icon"></i>
+              <div>
+                <h3 class="info-title">Messenger</h3>
+                <span class="info-subtitle"></span>
+              </div>
+            </div> -->
+            <div class="info-item">
+               <i class="fa-solid fa-phone info-icon"></i>
+              <div>
+                <h3 class="info-title">Phone</h3>
+                <span class="info-subtitle">01157466902</span>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <i class="fa-solid fa-envelope info-icon"></i>
+              <div>
+                <h3 class="info-title">Email</h3>
+                <span class="info-subtitle">ahmedabdalmanaem49@gmail.com </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="#about" id="scroll-btn"></a>
+      </section>
+  
+      <section class="about section" id="about">
+        <h2 class="section-title">About <span class="me-about"> Me</span></h2>
+        <div class="about-container container grid">
+          <img src="Images/3transpaper_.png" alt="" class="about-img" />
+          <div class="about-data">
+            <h3 class="about-heading">
+              Hey, I'm Ahmed Abd Elmoneim
+            </h3>
+            <p class="about-description">
+                I'm 21 years old from Sohag Governorate Egypt, I study the Internet and Multimedia in the Faculty of Media Sciences at the International Academy of Engineering and Media Sciences, I have good knowledge of designing websites and applications
+            </p>
+
+            <div class="about-info grid">
+              <div class="about-box">
+                <i class="fa-solid fa-award about-icon"></i>
+                <h3 class="about-title">Experience</h3>
+                <span class="about-subtitle">junior</span>
+              </div>
+              <div class="about-box">
+                <i class="fa-solid fa-briefcase about-icon"></i>
+                <h3 class="about-title">Completed</h3>
+                <span class="about-subtitle">2 + projects</span>
+              </div>
+              <div class="about-box">
+                <i class="fa-solid fa-headphones about-icon"></i>
+                <h3 class="about-title">Support</h3>
+                <span class="about-subtitle">Available</span>
+              </div>
+            </div>
+            <a href="#contact" class="button"
+              ><i class="fa-solid fa-location-arrow button-icon"></i>Contact
+              Me</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section class="qualification section">
+        <h2 class="section-title">
+          Qualification</span>
+        </h2>
+        <div class="qualification-container container grid">
+          <div class="Education">
+            <h3 class="qualification-title">
+              <i
+                class="fa-solid fa-graduation-cap qualification"
+                id="Education"
+              ></i
+              >Education
+            </h3>
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="circle-dot"></div>
+                <h3 class="timeline-title">
+                  International Academy For Engineering and Media Science
+                  (IAEMS)
+                </h3>
+                <p class="timeline-text">Bachelors Of Media Science</p>
+                <span class="timeline-date"
+                  ><i class="fa-solid fa-calendar-days"></i>2019-9 –
+                  current</span
+                >
+              </div>
+
+              <div class="timeline-item">
+                <div class="circle-dot"></div>
+                <h3 class="timeline-title">
+                  Al-shaheed AlHussein Abo Dhaif Secondary School
+                </h3>
+                <p class="timeline-text">High School</p>
+                <span class="timeline-date"
+                  ><i class="fa-solid fa-calendar-days"></i> 2016-9-2019-7</span
+                >
+              </div>
+
+              <!-- <div class="timeline-item">
+              <div class="circle-dot"></div>
+              <h3 class="timeline-title"></h3>
+              <p class="timeline-text"></p>
+              <span class="timeline-date"
+                ><i class="fa-solid fa-calendar-days"></i> 2013 - present</span
+              >
+            </div> -->
+            </div>
+          </div>
+
+          <div class="experience">
+            <h3 class="qualification-title">
+              <i class="fa-solid fa-briefcase" id="Experience"></i>
+            Work history</h3>
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="circle-dot"></div>
+                <h3 class="timeline-title">Vodafone Egypt</h3>
+                <p class="timeline-text">Call Center Agent</p>
+                <span class="timeline-date"
+                  ><i class="fa-solid fa-calendar-days"></i>
+                  2021-7-2021-10</span
+                >
+              </div>
+
+              <!-- <div class="timeline-item">
+              <div class="circle-dot"></div>
+              <h3 class="timeline-title"></h3>
+              <p class="timeline-text"></p>
+              <span class="timeline-date"
+                ><i class="fa-solid fa-calendar-days"></i> 2013 - present</span
+              >
+            </div> -->
+
+              <!-- <div class="timeline-item">
+              <div class="circle-dot"></div>
+              <h3 class="timeline-title"></h3>
+              <p class="timeline-text"></p>
+              <span class="timeline-date"
+                ><i class="fa-solid fa-calendar-days"></i> 2013 - present</span
+              >
+            </div> -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="skills section" id="skills">
+         <h2 class="section-title">Skills</h2>
+        <div class="skills-container container grid">
+<div class="skills-tabs">
+  <div class="skills-header skills-active" data-target="#Front-End">
+ <i class="fa-solid fa-code  skills-icon "></i>
+    <div>
+      <h1 class="skills-title">Front-End developer</h1>
+      <span class="skills-subtitle">Junior</span>
+    </div>
+      <i class="fa-solid fa-angle-down skills-arrow"></i>
+</div>
+      <div class="skills-header" data-target="#Design">
+  <i class="fa-solid fa-swatchbook skills-icon"></i>
+    <div>
+      <h1 class="skills-title">UI-Ux Design</h1>
+      <span class="skills-subtitle">More than 3 months</span>
+    </div>
+     <i class="fa-solid fa-angle-down skills-arrow"></i>
+  </div>
+  
+   <div class="skills-header" data-target="#Other">
+  <i class="fa-solid fa-layer-group skills-icon "></i>
+    <div>
+      <h1 class="skills-title">Other</h1>
+      <span class="skills-subtitle">More and less than 3 months</span>
+    </div>
+     <i class="fa-solid fa-angle-down skills-arrow"></i>
+  </div>
+</div>
+<div class="skills-content">
+  <div class="skills-group skills-active" data-content id="Front-End">
+    <div class="skills-list grid">
+      <div class="skills-data">
+        <div class="skills-titles">
+          <h3 class="skills-name">HTML</h3>
+          <span class="skills-number">90%</span>
+        </div>
+        <div class="skills-bar">
+          <span class="skills-percentage" style="width:90% ;"></span>
+        </div>
+      </div>
+
+       <div class="skills-data">
+        <div class="skills-titles">
+          <h3 class="skills-name">CSS</h3>
+          <span class="skills-number">85%</span>
+        </div>
+        <div class="skills-bar">
+          <span class="skills-percentage" style="width:85% ;"></span>
+        </div>
+      </div>
+
+       <div class="skills-data">
+        <div class="skills-titles">
+          <h3 class="skills-name">JavaScript</h3>
+          <span class="skills-number">70%</span>
+        </div>
+        <div class="skills-bar">
+          <span class="skills-percentage" style="width:70% ;"></span>
+        </div>
+      </div>
+
+        </div>
+      </div>
+
+      <div class="skills-group" data-content id="Design">
+    <div class="skills-list grid">
+      <div class="skills-data">
+        <div class="skills-titles">
+          <h3 class="skills-name">Figma</h3>
+          <span class="skills-number">90%</span>
+        </div>
+        <div class="skills-bar">
+          <span class="skills-percentage" style="width:90% ;"></span>
+        </div>
+      </div>
+
+       <div class="skills-data">
+        <div class="skills-titles">
+          <h3 class="skills-name">Adobe XD</h3>
+          <span class="skills-number">85%</span>
+        </div>
+        <div class="skills-bar">
+          <span class="skills-percentage" style="width:85% ;"></span>
+        </div>
+      </div>
+
+      <div class="skills-data">
+        <div class="skills-titles">
+          <h3 class="skills-name">Photoshop</h3>
+          <span class="skills-number">80%</span>
+        </div>
+        <div class="skills-bar">
+          <span class="skills-percentage" style="width:80% ;"></span>
+        </div>
+      </div>
+
+       <div class="skills-data">
+        <div class="skills-titles">
+          <h3 class="skills-name">Sketch</h3>
+          <span class="skills-number">70%</span>
+        </div>
+        <div class="skills-bar">
+          <span class="skills-percentage" style="width:70% ;"></span>
+        </div>
+      </div>
+
+        </div>
+      </div>
+
+       <div class="skills-group" data-content id="Other">
+    <div class="skills-list grid">
+       <div class="skills-data">
+        <div class="skills-titles">
+          <h3 class="skills-name">Illustrator</h3>
+          <span class="skills-number">85%</span>
+        </div>
+        <div class="skills-bar">
+          <span class="skills-percentage" style="width:85% ;"></span>
+        </div>
+      </div>
+
+       <div class="skills-data">
+        <div class="skills-titles">
+          <h3 class="skills-name">After Effects</h3>
+          <span class="skills-number">75%</span>
+        </div>
+        <div class="skills-bar">
+          <span class="skills-percentage" style="width:75% ;"></span>
+        </div>
+      </div>
+
+      <div class="skills-data">
+        <div class="skills-titles">
+          <h3 class="skills-name">Adobe Premiere</h3>
+          <span class="skills-number">80%</span>
+        </div>
+        <div class="skills-bar">
+          <span class="skills-percentage" style="width:80% ;"></span>
+        </div>
+      </div>
+
+      <div class="skills-data">
+        <div class="skills-titles">
+          <h3 class="skills-name">Maya</h3>
+          <span class="skills-number">65%</span>
+        </div>
+        <div class="skills-bar">
+          <span class="skills-percentage" style="width:65% ;"></span>
+        </div>
+      </div>
+
+       <div class="skills-data">
+        <div class="skills-titles">
+          <h3 class="skills-name">Photography</h3>
+          <span class="skills-number">65%</span>
+        </div>
+        <div class="skills-bar">
+          <span class="skills-percentage" style="width:65% ;"></span>
+        </div>
+      </div>
+
+       <div class="skills-data">
+        <div class="skills-titles">
+          <h3 class="skills-name">JAVA</h3>
+          <span class="skills-number">60%</span>
+        </div>
+        <div class="skills-bar">
+          <span class="skills-percentage" style="width:60% ;"></span>
+        </div>
+      </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        </div>
+        </section>
+
+        <section class="works section" id="work">
+          <h2 class="section-title">Rescent <span class="me-about">Works</span></h2>
+          <div class="work-filters">
+            <span class="work-item active-work" data-filter="all">All</span>
+            <span class="work-item" data-filter=".web">Web</span>
+            <span class="work-item" data-filter=".app">App</span>
+            <span class="work-item" data-filter=".other">Other</span>
+          </div>
+          <div class="work-container container grid">
+            <div class="work-card mix web">
+             <img src="Images/Dashboard.png" alt="" class="work-img">
+              <h3 class="work-title">Web Design</h3>
+              <span class="work-button">More<i class="fa-solid fa-angles-right work-button-icon"></i></span>
+             <div class="portofoli-item-details">
+              <h3 class="details-title">Desktop Applications</h3>
+              <p class="details-description">Desktop Application ODC Learning Management System</p>
+              <ul class="details-info">
+                <li>Created - <span>4 Oct 2022</span></li>
+                <li>Tools - <span>Figma</span></li>
+                <li>Role - <span>UI-UX Design</span></li>
+                <li>View - <span><a href="https://www.behance.net/gallery/154053275/ODC-Learning-Management-System" target="_blank">www.ODC.com</a></span></li>
+              </ul>
+             </div>
+            </div>
+            <div class="work-card mix web">
+             <img src="Images/protofile.png" alt="" class="work-img">
+              <h3 class="work-title">Web Design</h3>
+              <span class="work-button">More<i class="fa-solid fa-angles-right work-button-icon"></i></span>
+             <div class="portofoli-item-details">
+              <h3 class="details-title">Web design for portfolio me</h3>
+              <p class="details-description">A personal site about me and display all my work in the fields</p>
+              <ul class="details-info">
+                <li>Created - <span>4 Oct 2022</span></li>
+                <li>Tools - <span>Figma & HTML,CSS,js</span></li>
+                <li>Role - <span>UI-UX Design & frontend</span></li>
+                <li>View - <span><a href="#">www.portfolio.com</a></span></li>
+              </ul>
+             </div>
+            </div>
+            <div class="work-card mix web">
+             <img src="Images/Web 1920 – 1@2x.jpg" alt="" class="work-img">
+              <h3 class="work-title">Web Design</h3>
+              <span class="work-button">More<i class="fa-solid fa-angles-right work-button-icon"></i></span>
+             <div class="portofoli-item-details">
+              <h3 class="details-title">Web design for Peats</h3>
+              <p class="details-description">A website for an online store to sell pet products and provide some services that make it easier for the consumer</p>
+              <ul class="details-info">
+                <li>Created - <span>10 apr 2022</span></li>
+                <li>Tools - <span>Adobe XD</span></li>
+                <li>Role - <span>UI-UX Design</span></li>
+                <li>View - <span><a href="https://www.behance.net/gallery/154401633/Website-App-For-Pets" target="_blank">www.Petsea.com</a></span></li>
+              </ul>
+             </div>
+            </div>
+
+            <div class="work-card mix app">
+                <img src="Images/Desktop - 2.png" alt="" class="work-img">
+              <h3 class="work-title">App Design</h3>
+              <span class="work-button">More<i class="fa-solid fa-angles-right work-button-icon"></i></span>
+             <div class="portofoli-item-details">
+              <h3 class="details-title">App Design for Peats</h3>
+              <p class="details-description">A App for an online store to sell pet products and provide some services that make it easier for the consumer</p>
+              <ul class="details-info">
+                <li>Created - <span>10 apr 2022</span></li>
+                <li>Tools - <span>Adobe XD</span></li>
+                <li>Role - <span>UI-UX Design</span></li>
+                <li>View - <span><a href="https://www.behance.net/gallery/154401633/Website-App-For-Pets" target="_blank">www.Pets.com</a></span></li>
+              </ul>
+             </div>
+            </div>
+
+            <div class="work-card mix other">
+                <img src="Images/maya.png" alt="" class="work-img">
+              <h3 class="work-title">Other Designs</h3>
+              <span class="work-button">More<i class="fa-solid fa-angles-right work-button-icon"></i></span>
+             <div class="portofoli-item-details">
+              <h3 class="details-title">3D house garden</h3>
+              <p class="details-description">A three-dimensional house garden contains a swing, a slide and a wooden plane</p>
+              <ul class="details-info">
+                <li>Created - <span>6 May 2022</span></li>
+                <li>Tools - <span>Autodesk Maya</span></li>
+                <li>Role - <span>3D Model</span></li>
+                <li>View - <span><a href="Images/maya.png" target="_blank">www.3D house garden.com</a></span></li>
+              </ul>
+             </div>
+            </div>
+              <div class="work-card mix other">
+                <img src="Images/Movies & TV 10_6_2022 11_38_13 AM.png" alt="" class="work-img">
+              <h3 class="work-title">Other Designs</h3>
+              <span class="work-button">More<i class="fa-solid fa-angles-right work-button-icon"></i></span>
+             <div class="portofoli-item-details">
+              <h3 class="details-title">Portrait video</h3>
+              <p class="details-description">A video-portrait of the life of actor Ahmed Mekky and a short overview of him</p>
+              <ul class="details-info">
+                <li>Created - <span>18 May 2022</span></li>
+                <li>Tools - <span>Adobe After Effects & Adobe Premiere</span></li>
+                <li>Role - <span>Portrait video</span></li>
+                <li>View - <span><a href="https://youtu.be/5xwcKhTqY34" target="_blank">www.Ahmed Mekky.com</a></span></li>
+              </ul>
+             </div>
+            </div>
+              <div class="work-card mix other">
+                <img src="Images/maxresdefault.jpg" alt="" class="work-img">
+              <h3 class="work-title">Other Designs</h3>
+              <span class="work-button">More<i class="fa-solid fa-angles-right work-button-icon"></i></span>
+             <div class="portofoli-item-details">
+              <h3 class="details-title">Video Trailer</h3>
+              <p class="details-description">Trailer video for the movie Al-Arif, modified</p>
+              <ul class="details-info">
+                <li>Created - <span>25 Des 2021</span></li>
+                <li>Tools - <span>Adobe Premiere</span></li>
+                <li>Role - <span>Video Trailer</span></li>
+                <li>View - <span><a href="https://www.youtube.com/watch?v=uihLnvGLHN8" target="_blank">www.Video Trailer.com</a></span></li>
+              </ul>
+             </div>
+            </div>
+            <div class="work-card mix web">
+             <img src="Images/CV - Brave 10_8_2022 12_59_30 PM.png" alt="" class="work-img">
+              <h3 class="work-title">Web Design</h3>
+              <span class="work-button">More<i class="fa-solid fa-angles-right work-button-icon"></i></span>
+             <div class="portofoli-item-details">
+              <h3 class="details-title">Web design For portfolio</h3>
+              <p class="details-description">A personal site and display all my work in the fields</p>
+              <ul class="details-info">
+                <li>Created - <span>27 Feb 2022</span></li>
+                <li>Tools - <span> HTML,CSS,js</span></li>
+                <li>Role - <span>frontend</span></li>
+                <li>View - <span><a href="https://ahmedabdelmoneim21.github.io/portfolio/" target="_blank">www.portfolio.com</a></span></li>
+              </ul>
+             </div>
+            </div>
+            <div class="work-card mix web">
+             <img src="Images/lapot.png" alt="" class="work-img">
+              <h3 class="work-title">Web Design</h3>
+              <span class="work-button">More<i class="fa-solid fa-angles-right work-button-icon"></i></span>
+             <div class="portofoli-item-details">
+              <h3 class="details-title">Web design For Laptops</h3>
+              <p class="details-description">Online store for selling laptops and buying used laptops</p>
+              <ul class="details-info">
+                <li>Created - <span>23 Des 2021</span></li>
+                <li>Tools - <span>Figma</span></li>
+                <li>Role - <span>UI-UX Design</span></li>
+                <li>View - <span><a href="https://www.figma.com/proto/4k6M93QuURUn2o88ABs2jN/MMI-307?page-id=0%3A1&node-id=0%3A3&viewport=705%2C225%2C0.08&scaling=min-zoom&starting-point-node-id=0%3A3" target="_blank">www.Technoify.com</a></span></li>
+              </ul>
+             </div>
+            </div>
+          </div>
+          
+        </section>
+
+
+          <div class="portfolio-popup">
+            <div class="portfolio-popup-inner">
+              <div class="portfolio-popup-content grid">
+                <span class= "portfolio-popup-close"> <i class="fa-sharp fa-solid fa-xmark"></i></span>
+                  <div class="pp-thumbnail ">
+                    <img src="Images/Dashboard.png" alt="" class="portfolio-popup-img">
+                  </div>
+                    <div class="portfolio-popup-info">
+                      <div class="portfolio-popup-subtitle">Featured <span>Design</span></div>
+                      <div class="portfolio-popup-body">
+                          <h3 class="details-title">Web design for portfolio me</h3>
+              <p class="details-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam,</p>
+              <ul class="details-info">
+                <li>Created - <span>10 apr 2022</span></li>
+                <li>Tools - <span>Adobe XD</span></li>
+                <li>Role - <span>frontend</span></li>
+                <li>View - <span><a href="#">www.google.com</a></span></li>
+              </ul>
+                      </div>
+                    </div>
+              </div>
+            </div>
+          </div>
+
+     <section class="services-section" id="services">
+       <h2 class="section-title">what I<span class="me-about"> Offer</span></h2>
+    <div class="services-container container grid">
+
+      <div class="services-content"> 
+        <div>
+            <i class="fa-solid fa-laptop-code services-icon"></i>
+          <h3 class="services-title">Web <br> Designer
+        </div>
+           </div>
+
+           <div class="services-content"> 
+        <div>
+          <i class="fa-solid fa-mobile-screen-button services-icon"></i>
+          <h3 class="services-title">UI-UX <br> Designer
+        </div>
+           </div>
+
+           <div class="services-content"> 
+        <div>
+           <i class="fa-solid fa-video services-icon"></i>
+          <h3 class="services-title">Video<br>Editor
+        </div>
+           </div>
+          </div>
+          </section>
+
+
+<section class="Certificates section" id="Certificates">
+          <h2 class="section-title">Certificates <span class="me-about"></span></h2>
+          <div class="Certificates-container container swiper">
+             <div class="swiper-wrapper">
+
+            
+             <div class="Certificates-card swiper-slide"><img src="Images/New folder//front-end developer for meta.svg" alt=""></div>
+              <div class="Certificates-card swiper-slide"><img src="Images/New folder/THE WEB DEVELOPMENT CHALLENGER TRACK.svg" alt=""></div>
+              <div class="Certificates-card swiper-slide"><img src="Images/New folder/html css iti.svg" alt=""></div>
+              <div class="Certificates-card swiper-slide"><img src="Images/New folder/java script iti.svg" alt=""></div>
+              <div class="Certificates-card swiper-slide"><img src="Images/New folder/ux iti.svg" alt=""></div>
+              <div class="Certificates-card swiper-slide"><img src="Images/New folder/UIUX creat learning.svg" alt=""></div>
+              <div class="Certificates-card swiper-slide"><img src="Images/New folder/customer services.svg" alt=""></div>
+              <div class="Certificates-card swiper-slide"><img src="Images/New folder/TypeScript.svg" alt=""></div>
+
+
+             </div>
+            </div>
+          </div>
+        </section>
+
+          <section class="contact section" id="contact">
+              <h2 class="section-title">Contact<span class="me-about"> Me</span></h2>
+               <div class="contact-container container grid">
+
+                  <div class="contact-content">
+                    <div class="contact-info">
+                      <div class="contact-card">
+                            <i class="fa-solid fa-envelope contact-card-icon"></i>
+                            <h3 class="contact-card-title">Email</h3>
+                             <span class="contact-card-data">ahmedabdalmanaem49@gmail.com </span>
+                      </div>
+                       <div class="contact-card">
+                            <i class="fa-brands fa-whatsapp contact-card-icon"></i>
+                            <h3 class="contact-card-title">Whatsapp</h3>
+                             <span class="contact-card-data">01157466902</span>
+                      </div>
+                      <div class="contact-card">
+                            <i class="fa-solid fa-phone contact-card-icon"></i>
+                            <h3 class="contact-card-title">Phone</h3>
+                             <span class="contact-card-data">01007282596</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="contact-content">
+                    <form action="" class="contact-form">
+                      <div class="input-container">
+                      <input type="text" class="input">
+                      <label for="">Username</label>
+                      <span>Username</span>
+                      </div>
+                     <div class="input-container">
+                      <input type="email" class="input">
+                      <label for="">Email</label>
+                      <span>Email</span>
+                      </div>
+                       <div class="input-container">
+                      <input type="tel" class="input">
+                      <label for="">Phone</label>
+                      <span>Phone</span>
+                      </div>
+                       <div class="input-container textarea">
+                      <textarea name="" id="" class="input"></textarea>
+                      <label for="">Message</label>
+                      <span>Message</span>
+                      </div>
+
+                      <button type="submit" class="button"><i class="fa-solid fa-location-arrow button-icon"></i>Send Message</button>
+                    </form>
+                  </div>
+                  </div>
+          </section>
+          <footer class="footer">
+            <div class="footer-bg">
+              <div class="footer-container container grid">
+                <div>
+                   <h1 class="footer-title">AHMED</h1>
+                  <span class="footer-subtitle">Front-End developer</span>
+                </div>
+                <ul class="footer-links">
+                  <li>
+                    <a href="#services" class="footer-link">Services</a>
+                  </li>
+                  <li>
+                    <a href="#work" class="footer-link">Work</a>
+                  </li>
+                  <li>
+                    <a href="#contact" class="footer-link">Contact</a>
+                  </li>
+                </ul>
+                <div class="footer-socials">
+                   <a
+                href="https://www.facebook.com/ahmedabdalmanaem2"
+                target="_blank"
+                class="footer-social"
+                ><i class="fa-brands fa-facebook "></i
+              ></a>
+              <a
+                href="https://www.instagram.com/ahmedabdelmoneim19/"
+                target="_blank"
+                class="footer-social"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+              <a
+                href="https://www.behance.net/"
+                target="_blank"
+                class="footer-social"
+              >
+                <i class="fa-brands fa-behance"></i
+              ></a>
+              <a
+                href="https://github.com/AhmedAbdElmoneim21"
+                target="_blank"
+                class="footer-social"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+                </div>
+              </div>
+              <p class="footer-copy">&#169; Mn3m. All right reserved</p>
+            </div>
+          </footer>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script src="js/scrollreveal.min.js"></script>
+    <script src="js/mixitup.min.js"></script>
+    <script src="js/main.js">
+    </script>
+  </body>
+</html>
