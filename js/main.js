@@ -1,3 +1,4 @@
+
 const tabs = document.querySelectorAll("[data-target]");
 const tabContent = document.querySelectorAll("[data-content]");
 
@@ -196,3 +197,5 @@ body.onclick = function () {
     audio.pause();
   }
 }
+
+
