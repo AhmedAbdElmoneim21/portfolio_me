@@ -1,4 +1,3 @@
-
 const tabs = document.querySelectorAll("[data-target]");
 const tabContent = document.querySelectorAll("[data-content]");
 
@@ -125,77 +124,94 @@ sr.reveal(`#about, .services-section`, { origin: "bottom", interval: 100 });
 sr.reveal(` .qualification, #Certificates`, { origin: "left", interval: 100 });
 sr.reveal(`#skills`, { origin: "right", interval: 100 });
 
-const app = document.querySelector('.home-title');
-const typewriter = new Typewriter('.home-title', {
-    loop: true
+const app = document.querySelector(".home-title");
+const typewriter = new Typewriter(".home-title", {
+  loop: true,
 });
-typewriter.typeString("Hi, I'm Ahmed")
-    .pauseFor(2500)
-  .start();
-    
+typewriter.typeString("Hi, I'm Ahmed").pauseFor(2500).start();
 
-const up = document.querySelector('.up')
+const up = document.querySelector(".up");
 window.onscroll = function () {
-   this.scrollY >= 600 ? up.classList.add('asd') : up.classList.remove('asd')
-}
+  this.scrollY >= 600 ? up.classList.add("asd") : up.classList.remove("asd");
+};
 up.onclick = function () {
   window.scrollTo({
     top: 0,
-    behavior:'smooth'
-   })
-}
- const btn = document.querySelector('.btn-share')
-const title = window.document.title
-const url = window.document.location.href
-btn.addEventListener('click', () => {
+    behavior: "smooth",
+  });
+};
+const btn = document.querySelector(".btn-share");
+const title = window.document.title;
+const url = window.document.location.href;
+btn.addEventListener("click", () => {
   if (navigator.share) {
-    navigator.share({
-      title: `${title}`,
-      url: `${url}`
-    }).then(() => {
-      console.log("Thanks for sharing!");
-    })
-    .catch(console.error)
+    navigator
+      .share({
+        title: `${title}`,
+        url: `${url}`,
+      })
+      .then(() => {
+        console.log("Thanks for sharing!");
+      })
+      .catch(console.error);
   }
-})
+});
 
-         let swiper = new Swiper(".Certificates-container", {
-           spaceBetween: 24,
-           grabCursor: true,
-           autoplay: {
-          delay: 2500,
-          disableOnInteraction: false
-        },
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-         });
-      
+let swiper = new Swiper(".Certificates-container", {
+  spaceBetween: 24,
+  grabCursor: true,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
 
-let loading = document.getElementById('loading')
+let loading = document.getElementById("loading");
 
-setTimeout(load, 1500)
+setTimeout(load, 1500);
 function load() {
-  window.onload = loading.style.display = "none"
+  window.onload = loading.style.display = "none";
 }
 // window.onload = function() {
 //   document.getElementById('audio').onplay()
 // }
 
-    const audio = document.getElementById('pap');   
-    const body = document.body   
-//     function beepSound () {   
+const audio = document.getElementById("pap");
+const body = document.body;
+//     function beepSound () {
 //       audio.play()
-// }   
+// }
 // beepSound()
-    
+
 body.onclick = function () {
   if (audio.paused) {
     audio.play();
   } else {
     audio.pause();
   }
-}
+};
 
+const namee = document.getElementById("name").value;
 
+const emaile = document.getElementById("email").value;
+
+const phonee = document.getElementById("phone").value;
+
+const messagee = document.getElementById("message").value;
+
+const firebaseConfig = {
+  apiKey: "AIzaSyAfJzc6w5jzoHg9lyiYngvfwyWB_pKW8D8",
+  authDomain: "contact-form-7bed6.firebaseapp.com",
+  databaseURL: "https://contact-form-7bed6-default-rtdb.firebaseio.com",
+  projectId: "contact-form-7bed6",
+  storageBucket: "contact-form-7bed6.appspot.com",
+  messagingSenderId: "1046621602443",
+  appId: "1:1046621602443:web:f1a6c01de47199d63d0a8e",
+  measurementId: "G-60NNRRFV01",
+};
+firebase.initializeApp(firebaseConfig);
+let contactDB = firebase.database().ref("contact");
