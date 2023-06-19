@@ -157,18 +157,18 @@ btn.addEventListener("click", () => {
   }
 });
 
-let swiper = new Swiper(".Certificates-container", {
-  spaceBetween: 24,
-  grabCursor: true,
-  autoplay: {
-    delay: 2500,
-    disableOnInteraction: false,
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-});
+// let swiper = new Swiper(".Certificates-container", {
+//   spaceBetween: 24,
+//   grabCursor: true,
+//   autoplay: {
+//     delay: 2500,
+//     disableOnInteraction: false,
+//   },
+//   pagination: {
+//     el: ".swiper-pagination",
+//     clickable: true,
+//   },
+// });
 
 let loading = document.getElementById("loading");
 
