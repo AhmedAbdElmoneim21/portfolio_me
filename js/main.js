@@ -119,10 +119,14 @@ const sr = ScrollReveal({
   reset: true,
 });
 /* Animations repeat */
-sr.reveal(`.home, #work, .contact`);
-sr.reveal(`#about, .services-section`, { origin: "bottom", interval: 100 });
-sr.reveal(` .qualification, #Certificates`, { origin: "left", interval: 100 });
-sr.reveal(`#skills`, { origin: "right", interval: 100 });
+sr.reveal(`.home`);
+sr.reveal(
+  `#about, .services-section, .qualification, #Certificates, #skills, #work, .contact`,
+  {
+    origin: "bottom",
+    interval: 100,
+  }
+);
 
 const app = document.querySelector(".home-title");
 const typewriter = new Typewriter(".home-title", {
