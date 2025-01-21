@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
 :root {
   --hue-color: 242;
 
@@ -12,7 +13,7 @@
   --scroll-thumb-color: hsl(var(--hue-color), 12%, 26%);
 
   /*===== Font and Typography =====*/
-  --body-font: "Poppins", sans-serif;
+  --body-font: "Kalam", sans-serif;
 
   /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
   --biggest-font-size: 3rem;
@@ -199,7 +200,7 @@ input {
 }
 .home {
   height: 100vh;
-  background-image: url("../Images/background\ .jpg");
+  background-image: url("/Images/background_landing.png");
   background-size: cover;
   background-position: center center;
 }
@@ -342,10 +343,20 @@ input {
 .section-title:hover::after {
   width: 10%;
 }
+.about_section{
+  
+}
+
 .about-container {
   grid-template-columns: repeat(2, 1fr);
   column-gap: 4rem;
   align-items: center;
+  background-image: url(/Images/paterrn_left_front.png);
+  background-position: center;
+  background-position: center center;
+  
+  
+  
 }
 .about-img {
   width: 480px;
@@ -389,6 +400,9 @@ input {
   grid-template-columns: repeat(2, 340px);
   column-gap: 3rem;
   justify-content: center;
+  background-image: url(/Images/paterrn_right_front.png);
+  background-position: center;
+  background-position: center center;
 }
 .qualification-title {
   font-size: var(--h3-font-size);
@@ -450,6 +464,7 @@ input {
   grid-template-columns: 360px 320px;
   column-gap: 3rem;
   justify-content: center;
+ 
 }
 .skills-header {
   display: flex;
@@ -511,11 +526,16 @@ input {
 .skills-active[data-content] {
   display: block;
 }
+
 .work-container {
   grid-template-columns: repeat(3, 330px);
   gap: 1.8rem;
   justify-content: center;
   padding-top: 1rem;
+  background-image: url(/Images/paterrn_right_front.png);
+  background-position: center;
+  background-position: center center;
+  
 }
 .work-filters {
   display: flex;
@@ -546,7 +566,9 @@ input {
 }
 .work-img {
   border-radius: 0.5rem;
+  width: 100%;
   margin-bottom: var(--mb-1);
+  height: 70%;
 }
 .work-title {
   font-size: var(--normal-font-size);
@@ -637,7 +659,7 @@ input {
   color: var(--skin-color);
 }
 .services-container {
-  grid-template-columns: repeat(3, 250px);
+  grid-template-columns: repeat(3, 330px);
   justify-content: center;
   column-gap: 1.8rem;
 }
@@ -674,17 +696,30 @@ input {
 .Certificates-container {
   /* display: grid;
   grid-template-columns: repeat(3, 1fr); */
+  
+  
+  
+  
 }
 .swiper-wrapper {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 330px);
   gap: 1.5rem;
+  row-gap: 1.5rem;
+  justify-content: center;
+  background-image: url(/Images/paterrn_right_front.png);
+  background-position: right;
+  background-position: center center;
+  
 }
 /* ............................................... */
 .contact-container {
-  grid-template-columns: 300px 340px;
-  column-gap: 3rem;
+  grid-template-columns: repeat(3, 220px);
+  
+  
+  
   justify-content: center;
+  gap: 2rem;
   align-items: center;
 }
 .contact-info {
@@ -826,6 +861,8 @@ textarea.input {
 .footer-container {
   grid-template-columns: repeat(3, 1fr);
   column-gap: 1.6rem;
+ 
+ 
 }
 .footer-bg {
   background-color: var(--box-color);

@@ -113,7 +113,7 @@ function navHighlighter() {
 
 const sr = ScrollReveal({
   origin: "top",
-  distance: "60px",
+  distance: "100px",
   duration: 1500,
   delay: 200,
   reset: true,
@@ -124,7 +124,7 @@ sr.reveal(
   `#about, .services-section, .qualification, #Certificates, #skills, #work, .contact`,
   {
     origin: "bottom",
-    interval: 100,
+    // interval: 500,
   }
 );
 
@@ -219,3 +219,18 @@ const firebaseConfig = {
 };
 firebase.initializeApp(firebaseConfig);
 let contactDB = firebase.database().ref("contact");
+
+
+
+
+
+$(document).ready(function(){
+  $('.work-slider').slick({
+      infinite: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      centerMode: true,
+      variableWidth: true,
+      arrows: true
+  });
+});
