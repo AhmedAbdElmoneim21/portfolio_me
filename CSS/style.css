@@ -203,7 +203,7 @@ input {
 }
 .home {
   height: 100vh;
-  background-image: url("/Images/background_landing.png");
+  background-image: url("../Images/background_landing.png");
   background-size: cover;
   background-position: center center;
 }
@@ -354,7 +354,7 @@ input {
   grid-template-columns: repeat(2, 1fr);
   column-gap: 4rem;
   align-items: center;
-  background-image: url(/Images/paterrn_left_front.png);
+  background-image: url(../Images/paterrn_left_front.png);
   background-position: center;
   background-position: center center;
   
