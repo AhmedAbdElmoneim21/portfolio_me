@@ -112,21 +112,28 @@ function navHighlighter() {
 }
 
 const sr = ScrollReveal({
-  origin: "top",
-  distance: "100px",
-  duration: 1500,
-  delay: 200,
-  reset: true,
+  origin: "top",       // نقطة البداية للحركة
+  distance: "50px",    // تقليل المسافة لجعل الحركة أكثر هدوءًا
+  duration: 1000,      // تقليل المدة لجعل الحركة أسرع قليلاً
+  delay: 100,          // تقليل التأخير بين الحركات
+  reset: false,        // تعطيل التكرار لجعل الحركة تحدث مرة واحدة فقط
+  easing: "ease-in-out" // حركة سلسة باستخدام easing
 });
-/* Animations repeat */
+
+/* Animation settings */
 sr.reveal(`.home`);
+
 sr.reveal(
   `#about, .services-section, .qualification, #Certificates, #skills, #work, .contact`,
   {
-    origin: "bottom",
-    // interval: 500,
+    origin: "bottom",    // تغيير نقطة البداية للحركة
+    distance: "50px",    // تقليل المسافة
+    duration: 1200,      // ضبط المدة لتكون أكثر سلاسة
+    delay: 150,          // ضبط التأخير لجعل الحركات متناسقة
+    easing: "ease-in-out" // جعل الحركة سلسة
   }
 );
+
 
 const app = document.querySelector(".home-title");
 const typewriter = new Typewriter(".home-title", {
