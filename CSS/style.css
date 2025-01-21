@@ -206,6 +206,7 @@ input {
   background-image: url("../Images/background_landing.png");
   background-size: cover;
   background-position: center center;
+  margin-bottom: 2rem;
 }
 .home-container {
   position: relative;
@@ -319,6 +320,7 @@ input {
 }
 .section {
   padding: 6.5rem 2rem;
+ 
 }
 .section-title {
   text-align: center;
@@ -403,7 +405,7 @@ input {
   grid-template-columns: repeat(2, 340px);
   column-gap: 3rem;
   justify-content: center;
-  background-image: url(/Images/paterrn_right_front.png);
+  background-image: url(../Images/paterrn_right_front.png);
   background-position: center;
   background-position: center center;
 }
@@ -535,10 +537,13 @@ input {
   gap: 1.8rem;
   justify-content: center;
   padding-top: 1rem;
-  background-image: url(/Images/paterrn_right_front.png);
+
+  
+}
+#work{
+  background-image: url(../Images/paterrn_right_front.png);
   background-position: center;
   background-position: center center;
-  
 }
 .work-filters {
   display: flex;
@@ -694,11 +699,18 @@ input {
   margin-bottom: var(--mb-1);
   font-weight: var(--font-medium);
 }
-
+#Certificates{
+  background-image: url(../Images/paterrn_left_front.png);
+  background-position: top;
+  background-position: center center;
+}
 /* ................................................ */
 .Certificates-container {
   /* display: grid;
   grid-template-columns: repeat(3, 1fr); */
+  /* background-image: url(../Images/paterrn_left_front.png);
+  background-position: top;
+  background-position: center center; */
   
   
   
@@ -710,9 +722,7 @@ input {
   gap: 1.5rem;
   row-gap: 1.5rem;
   justify-content: center;
-  background-image: url(/Images/paterrn_right_front.png);
-  background-position: right;
-  background-position: center center;
+ 
   
 }
 /* ............................................... */
