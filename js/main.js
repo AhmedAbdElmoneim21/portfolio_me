@@ -139,7 +139,7 @@ const app = document.querySelector(".home-title");
 const typewriter = new Typewriter(".home-title", {
   loop: true,
 });
-typewriter.typeString("Hi, I'm Ahmed").pauseFor(2500).start();
+typewriter.typeString("Hi, I'm Ahmed 👋").pauseFor(2500).start();
 
 const up = document.querySelector(".up");
 window.onscroll = function () {
