@@ -1,6 +1,6 @@
 # Ahmed Abd Elmoneim portfolio
 
-Static HTML, CSS, and JavaScript portfolio served by GitHub Pages. No build step or API keys.
+Static HTML, CSS, and JavaScript portfolio served by GitHub Pages. No build step or API keys. Norsal is self-hosted from the owner-provided font files. GSAP and ScrollTrigger 3.13.0 load from jsDelivr; content stays visible if these scripts are unavailable.
 
 ## Preview
 
@@ -12,9 +12,9 @@ Run `python3 -m http.server 8000` from the repository root and open http://local
 - `projects.html`: filterable project archive
 - `about.html`: current experience, background, and tools
 - `projects/`: individual project stories
-- `assets/projects/`: web-optimised covers exported from the owner-provided portfolio PDF
+- `assets/projects/`: web-optimised covers from the owner-provided PDF and updated OFUQ, Simlo v2.0, and Tajwal v3.6.2 PNGs
 - `CSS/style.css`: shared visual tokens, layout, responsive and reduced-motion styles
-- `js/main.js`: progressive enhancement for filters and subtle reveal animations
+- `js/main.js`: progressive enhancement for filters and cinematic whole-layer reveals, scroll composition, and pointer interactions
 
 The accent is set with `--accent` in CSS. Research findings, analytics usage, participant counts, and performance metrics should only be added after the owner provides real evidence. The stories describe interface scope and design rationale. Tajwal also includes owner-supplied annual registered-customer and SIM-sales totals, clearly separated from design impact; reporting years are unspecified. Historical cover status/date labels are part of the original artwork.
 

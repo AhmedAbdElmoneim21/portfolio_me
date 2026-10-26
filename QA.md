@@ -1,21 +1,14 @@
 # Verification notes
 
-- All 13 HTML pages have one h1 and image alternative text.
-- All repository-relative link and asset targets exist.
+- All 13 HTML pages have one h1, image alternative text, and valid local link/asset targets.
 - JavaScript passes Node syntax checking.
-- Browser checked home, project listing, project filters, and Tajwal project page.
-- Dashboard filter showed Qrep and Al-Tahawwul; resetting showed all ten projects.
-- Browser console had no warning or error entries on the inspected page.
-- Keyboard Tab reached the skip-to-content link.
-- Primary text colours meet 4.5:1 contrast: white/accent 6.52, grey/white 5.74, muted/dark 8.13, accent-dark/tint 7.98.
-- Responsive CSS is supplied for small phones, tablets, and desktops. Multi-width visual verification remains outstanding: browser viewport override did not change the measured 1280px viewport. Do not treat this as verified across all devices.
-- No tracking scripts, analytics credentials, fabricated user research findings, were added. Tajwal annual business totals are explicitly owner supplied, with unspecified reporting years and no causal design claim.
-- Purple accent #7040C4 is provisional; the LinkedIn banner was behind an authentication wall, so an exact colour match remains unverified.
-- Tajwal research and usability-test details are awaiting the owner's input.
-- New artwork exports come from the owner's supplied PDF; OFUQ cover is clearly described as the early Shreeha visual direction.
-
-- Tajwal before/after home frames were exported from the original Figma file and visually compared.
-
-- Motion refresh: character reveal, staggered entrance, project cards entering on scroll, continuous cover strip, and hover transitions. Respects reduced-motion preference. Browser console checked without errors after the update. Reference-inspired motion; exact Framer timing equivalence is not verified.
-
-- Tajwal before/after home frames were exported from the original Figma file and visually compared.
+- Home, project listing/filter controls, and Tajwal case page were checked in the browser.
+- Norsal is loaded from the owner's local Regular, SemiBold, and Bold font files. Browser computed typography reports Norsal.
+- Home was visually checked at 320, 768, 1024, and 1440px, without horizontal document overflow. Tablet social buttons were adjusted to keep their labels together.
+- GSAP whole-element reveal replaces all letter splitting. The hero settles by 2.9 seconds and holds through six seconds; an intermediate frame and the completed page were visually inspected.
+- Scroll composition includes a pinned case-study heading on desktop, staggered project entrances, and a continuous project-cover strip. Fine-pointer card tilt is disabled on touch devices.
+- Motion is scoped to prefers-reduced-motion: no-preference and reverted if that preference changes. HTML remains visible when animation libraries are unavailable.
+- Latest project covers come from the three owner-provided PNGs. Tajwal dashboard uses the operations cover from the final page of the portfolio PDF.
+- Simlo v2.0 and Tajwal v3.6.2 are labelled as redesigns in development. Existing App Store releases remain linked separately.
+- Tajwal annual totals are owner supplied, with unspecified reporting years and no claim that redesign caused the business growth. No fabricated research, participant counts, or analytics-tool experience was added.
+- Purple #7040C4 is provisional pending an exact LinkedIn banner colour sample. White/accent contrast is 6.52:1; dark purple/tint is 7.98:1.
