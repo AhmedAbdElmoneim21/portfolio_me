@@ -1,243 +1,107 @@
-const tabs = document.querySelectorAll("[data-target]");
-const tabContent = document.querySelectorAll("[data-content]");
-
-tabs.forEach((tab) => {
-  tab.addEventListener("click", () => {
-    const target = document.querySelector(tab.dataset.target);
-    tabContent.forEach((tabContents) => {
-      tabContents.classList.remove("skills-active");
-    });
-    target.classList.add("skills-active");
-
-    tabs.forEach((tab) => {
-      tab.classList.remove("skills-active");
-    });
-    tab.classList.add("skills-active");
+'use strict';
+// Navigation and filters enhance content that is already available in HTML.
+const page = window.location.pathname.split('/').pop() || 'index.html';
+document.querySelectorAll('.site-header nav a').forEach(link => {
+  if (link.getAttribute('href').split('/').pop() === page) link.setAttribute('aria-current', 'page');
+});
+const filters = document.querySelectorAll('[data-filter]');
+filters.forEach(button => button.addEventListener('click', () => {
+  const selected = button.dataset.filter;
+  filters.forEach(other => {
+    const active = other === button;
+    other.classList.toggle('active', active);
+    other.setAttribute('aria-pressed', String(active));
   });
-});
-// ................................................//
-let mixerPortfolio = mixitup(".work-container", {
-  selectors: {
-    target: ".work-card",
-  },
-  animation: {
-    duration: 300,
-  },
-});
-// ................................................//
-const linkWork = document.querySelectorAll(".work-item");
-
-function activeWork() {
-  linkWork.forEach((l) => l.classList.remove("active-work"));
-  this.classList.add("active-work");
-}
-linkWork.forEach((l) => l.addEventListener("click", activeWork));
-
-document.addEventListener("click", (e) => {
-  if (e.target.classList.contains("work-button")) {
-    togglePortfolioPopup();
-    portfolioItemDetails(e.target.parentElement);
-  }
-});
-
-function togglePortfolioPopup() {
-  document.querySelector(".portfolio-popup").classList.toggle("open");
-}
-document
-  .querySelector(".portfolio-popup-close")
-  .addEventListener("click", togglePortfolioPopup);
-
-function portfolioItemDetails(portfolioItem) {
-  document.querySelector(".pp-thumbnail img").src =
-    portfolioItem.querySelector(".work-img").src;
-  document.querySelector(".portfolio-popup-subtitle").innerHTML =
-    portfolioItem.querySelector(".work-title").innerHTML;
-
-  document.querySelector(".portfolio-popup-body").innerHTML =
-    portfolioItem.querySelector(".portofoli-item-details").innerHTML;
-}
-// ................................................//
-const inputs = document.querySelectorAll(".input");
-
-function focusFun() {
-  let parent = this.parentNode;
-  parent.classList.add("focus");
-}
-function funBlur() {
-  let parent = this.parentNode;
-  if (this.value == "") {
-    parent.classList.remove("focus");
-  }
-}
-inputs.forEach((input) => {
-  input.addEventListener("focus", focusFun);
-  input.addEventListener("blur", funBlur);
-});
-// ................................................//
-const navMenu = document.getElementById("slidebar"),
-  navToggle = document.getElementById("nav-toggle"),
-  navClose = document.getElementById("nav-close");
-if (navToggle) {
-  navToggle.addEventListener("click", () => {
-    navMenu.classList.add("show-slidebar");
+  let count = 0;
+  document.querySelectorAll('[data-category]').forEach(card => {
+    const visible = selected === 'all' || card.dataset.category === selected;
+    card.hidden = !visible;
+    if (visible) count++;
   });
-}
-if (navClose) {
-  navClose.addEventListener("click", () => {
-    navMenu.classList.remove("show-slidebar");
-  });
-}
-// ................................................//
-const sections = document.querySelectorAll("section[id]");
-window.addEventListener("scroll", navHighlighter);
-
-function navHighlighter() {
-  let scrollY = window.pageYOffset;
-
-  sections.forEach((current) => {
-    const sectionHeight = current.offsetHeight;
-    const sectionTop = current.offsetTop - 100,
-      sectionId = current.getAttribute("id");
-
-    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-      document
-        .querySelector(".nav-menu a[href*=" + sectionId + "]")
-        .classList.add("active-link");
-      return;
+  const status = document.getElementById('filter-status');
+  if (status) status.textContent = `${count} projects shown`;
+}));
+if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  const targets = document.querySelectorAll('.section-heading, .case-feature, .story-label, .practice-grid article');
+  document.documentElement.classList.add('motion-ready');
+  const observer = new IntersectionObserver(entries => entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('in-view');
+      observer.unobserve(entry.target);
     }
-    document
-      .querySelector(".nav-menu a[href*=" + sectionId + "]")
-      .classList.remove("active-link");
-  });
+  }), { threshold: 0.12 });
+  targets.forEach(target => { target.classList.add('reveal'); observer.observe(target); });
 }
 
-const sr = ScrollReveal({
-  origin: "top",       // نقطة البداية للحركة
-  distance: "50px",    // تقليل المسافة لجعل الحركة أكثر هدوءًا
-  duration: 1000,      // تقليل المدة لجعل الحركة أسرع قليلاً
-  delay: 100,          // تقليل التأخير بين الحركات
-  reset: false,        // تعطيل التكرار لجعل الحركة تحدث مرة واحدة فقط
-  easing: "ease-in-out" // حركة سلسة باستخدام easing
-});
-
-/* Animation settings */
-sr.reveal(`.home`);
-
-sr.reveal(
-  `#about, .services-section, .qualification, #Certificates, #skills, #work, .contact`,
-  {
-    origin: "bottom",    // تغيير نقطة البداية للحركة
-    distance: "50px",    // تقليل المسافة
-    duration: 1200,      // ضبط المدة لتكون أكثر سلاسة
-    delay: 150,          // ضبط التأخير لجعل الحركات متناسقة
-    easing: "ease-in-out" // جعل الحركة سلسة
+// Keep real text in the accessibility tree while animating its visual copy.
+const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
+if (!motionPreference.matches && 'animate' in Element.prototype) {
+  const easing = 'cubic-bezier(.22,1,.36,1)';
+  const animateText = (element, delay = 0) => {
+    if (element.dataset.animated) return;
+    element.dataset.animated = 'true';
+    const visible = document.createElement('span');
+    visible.setAttribute('aria-hidden', 'true');
+    const accessible = document.createElement('span');
+    accessible.className = 'sr-only';
+    accessible.textContent = element.innerText.replace(/\s+/g, ' ').trim();
+    const fragment = document.createDocumentFragment();
+    let index = 0;
+    for (const child of [...element.childNodes]) {
+      if (child.nodeType !== Node.TEXT_NODE) {
+        fragment.appendChild(child);
+        continue;
+      }
+      for (const word of child.textContent.split(/(\s+)/)) {
+        if (!word.trim()) { fragment.appendChild(document.createTextNode(word)); continue; }
+        const wrap = document.createElement('span');
+        wrap.className = 'motion-word';
+        for (const letter of word) {
+          const char = document.createElement('span');
+          char.textContent = letter;
+          char.className = 'motion-char';
+          wrap.appendChild(char);
+          char.animate([{opacity:0,transform:'translateY(65%) rotate(5deg)',filter:'blur(5px)'},{opacity:1,transform:'translateY(0) rotate(0)',filter:'blur(0)'}], {duration:650,delay:delay + index++ * 15,easing,fill:'backwards'});
+        }
+        fragment.appendChild(wrap);
+      }
+    }
+    visible.appendChild(fragment);
+    element.replaceChildren(accessible, visible);
+  };
+  const heroTitle = document.querySelector('.hero h1');
+  if (heroTitle) {
+    animateText(heroTitle, 100);
+    document.querySelectorAll('.availability, .hero-description, .social-row a').forEach((element, i) => {
+      element.animate([{opacity:0,transform:'translateY(24px)'},{opacity:1,transform:'translateY(0)'}],{duration:850,delay:100+i*90,easing,fill:'backwards'});
+    });
+    document.querySelector('.portrait-card')?.animate([{opacity:0,transform:'translateY(70px) rotate(-8deg) scale(.9)'},{opacity:1,transform:'translateY(0) rotate(3deg) scale(1)'}],{duration:1200,delay:350,easing,fill:'backwards'});
   }
-);
-
-
-const app = document.querySelector(".home-title");
-const typewriter = new Typewriter(".home-title", {
-  loop: true,
-});
-typewriter.typeString("Hi, I'm Ahmed 👋").pauseFor(2500).start();
-
-const up = document.querySelector(".up");
-window.onscroll = function () {
-  this.scrollY >= 600 ? up.classList.add("asd") : up.classList.remove("asd");
-};
-up.onclick = function () {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth",
-  });
-};
-const btn = document.querySelector(".btn-share");
-const title = window.document.title;
-const url = window.document.location.href;
-btn.addEventListener("click", () => {
-  if (navigator.share) {
-    navigator
-      .share({
-        title: `${title}`,
-        url: `${url}`,
-      })
-      .then(() => {
-        console.log("Thanks for sharing!");
-      })
-      .catch(console.error);
+  const titleObserver = new IntersectionObserver(entries => entries.forEach(entry => {
+    if (entry.isIntersecting) { animateText(entry.target); titleObserver.unobserve(entry.target); }
+  }), {threshold:.3});
+  document.querySelectorAll('.section-heading h2, .about-teaser h2, .contact h2').forEach(element=>titleObserver.observe(element));
+  const cards = document.querySelectorAll('.project-card, .case-feature, .metrics-grid article');
+  const cardObserver = new IntersectionObserver(entries => entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    const siblings = [...entry.target.parentElement.children];
+    entry.target.animate([{opacity:0,transform:'translateY(50px) scale(.97)'},{opacity:1,transform:'translateY(0) scale(1)'}],{duration:900,delay:(siblings.indexOf(entry.target)%2)*110,easing,fill:'backwards'});
+    cardObserver.unobserve(entry.target);
+  }),{threshold:.08});
+  cards.forEach(card=>cardObserver.observe(card));
+  const strip = document.querySelector('.cover-strip');
+  if (strip) {
+    const originals = [...strip.children];
+    originals.forEach(element=>{ const copy=element.cloneNode(true);copy.alt='';strip.appendChild(copy); });
+    const startMarquee = () => {
+      const distance = originals.reduce((sum,element)=>sum+element.getBoundingClientRect().width,0)+originals.length*parseFloat(getComputedStyle(strip).gap);
+      strip.getAnimations().forEach(animation=>animation.cancel());
+      strip.animate([{transform:`translateX(calc(-50% + ${distance/2}px)) rotate(-2deg)`},{transform:`translateX(calc(-50% - ${distance/2}px)) rotate(-2deg)`}],{duration:42000,iterations:Infinity,easing:'linear'});
+    };
+    startMarquee();
+    let resizeTimer;
+    window.addEventListener('resize',()=>{clearTimeout(resizeTimer);resizeTimer=setTimeout(startMarquee,150);},{passive:true});
   }
-});
-
-// let swiper = new Swiper(".Certificates-container", {
-//   spaceBetween: 24,
-//   grabCursor: true,
-//   autoplay: {
-//     delay: 2500,
-//     disableOnInteraction: false,
-//   },
-//   pagination: {
-//     el: ".swiper-pagination",
-//     clickable: true,
-//   },
-// });
-
-let loading = document.getElementById("loading");
-
-setTimeout(load, 1500);
-function load() {
-  window.onload = loading.style.display = "none";
+  // Honour a preference change without waiting for another page load.
+  motionPreference.addEventListener('change',event=>{if(event.matches) document.getAnimations().forEach(animation=>animation.cancel());});
 }
-// window.onload = function() {
-//   document.getElementById('audio').onplay()
-// }
-
-const audio = document.getElementById("pap");
-const body = document.body;
-//     function beepSound () {
-//       audio.play()
-// }
-// beepSound()
-
-body.onclick = function () {
-  if (audio.paused) {
-    audio.play();
-  } else {
-    audio.pause();
-  }
-};
-
-const namee = document.getElementById("name").value;
-
-const emaile = document.getElementById("email").value;
-
-const phonee = document.getElementById("phone").value;
-
-const messagee = document.getElementById("message").value;
-
-const firebaseConfig = {
-  apiKey: "AIzaSyAfJzc6w5jzoHg9lyiYngvfwyWB_pKW8D8",
-  authDomain: "contact-form-7bed6.firebaseapp.com",
-  databaseURL: "https://contact-form-7bed6-default-rtdb.firebaseio.com",
-  projectId: "contact-form-7bed6",
-  storageBucket: "contact-form-7bed6.appspot.com",
-  messagingSenderId: "1046621602443",
-  appId: "1:1046621602443:web:f1a6c01de47199d63d0a8e",
-  measurementId: "G-60NNRRFV01",
-};
-firebase.initializeApp(firebaseConfig);
-let contactDB = firebase.database().ref("contact");
-
-
-
-
-
-$(document).ready(function(){
-  $('.work-slider').slick({
-      infinite: true,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      centerMode: true,
-      variableWidth: true,
-      arrows: true
-  });
-});
