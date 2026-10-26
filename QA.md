@@ -20,3 +20,8 @@
 - Simlo design explorer uses the actual earlier and v2.0 covers. Fine-pointer lens smoothing and whole-image mode buttons were tested; controls provide a pointer-free alternative. Reduced-motion and coarse-pointer users start with a complete image.
 - Project quick-view dialog opens, traps focus using the native dialog element, closes with Escape, and restores focus to its opener. Desktop and 320px layouts were inspected.
 - Updated home widths 320/768/1024/1440 have no horizontal document overflow. Browser console has no errors or warnings on the tested pages.
+
+## Design explorer removal
+
+- Removed the comparison lens section, quick-view dialog, and their CSS and JavaScript at the owner's request. Home flows directly from the portrait hero into selected projects again.
+- Kept the theme toggle and updated portrait.

@@ -20,6 +20,6 @@ The accent is set with `--accent` in CSS. Research findings, analytics usage, pa
 
 Contact links and CV have been updated. No tracking scripts are installed.
 
-## Appearance and design explorer
+## Appearance
 
-The header theme toggle follows system preference on first visit and remembers an explicit choice. The home design explorer compares Simlo's earlier cover and v2.0 with an eased CSS mask; buttons can show either complete cover. A native dialog provides a project quick view with keyboard focus handling. The owner-provided portrait is served as an optimised WebP.
+The header theme toggle follows system preference on first visit and remembers an explicit choice. The owner-provided portrait is served as an optimised WebP.
