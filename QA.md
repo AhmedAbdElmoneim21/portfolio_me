@@ -12,3 +12,11 @@
 - Simlo v2.0 and Tajwal v3.6.2 are labelled as redesigns in development. Existing App Store releases remain linked separately.
 - Tajwal annual totals are owner supplied, with unspecified reporting years and no claim that redesign caused the business growth. No fabricated research, participant counts, or analytics-tool experience was added.
 - Purple #7040C4 is provisional pending an exact LinkedIn banner colour sample. White/accent contrast is 6.52:1; dark purple/tint is 7.98:1.
+
+## Theme and design explorer update
+
+- Light/dark theme toggle is present on all 13 pages. Initial theme follows the operating system; explicit choice is saved locally. Preference was verified after navigating from home to About.
+- Owner-provided beach portrait replaces the earlier portrait on Home and About; the file is resized for web delivery without altering the photo contents.
+- Simlo design explorer uses the actual earlier and v2.0 covers. Fine-pointer lens smoothing and whole-image mode buttons were tested; controls provide a pointer-free alternative. Reduced-motion and coarse-pointer users start with a complete image.
+- Project quick-view dialog opens, traps focus using the native dialog element, closes with Escape, and restores focus to its opener. Desktop and 320px layouts were inspected.
+- Updated home widths 320/768/1024/1440 have no horizontal document overflow. Browser console has no errors or warnings on the tested pages.
