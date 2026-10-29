@@ -6,7 +6,7 @@ English pages live at the root; Arabic equivalents live under `ar/`. The languag
 
 Run `python3 -m http.server 8000` from the repository root to preview.
 
-There are 13 project stories: eight mobile products, four dashboards/SaaS products, and one website. Tajwal and Simlo dashboards are independent projects linked to their mobile apps. Simlo and Tajwal histories show the original design and two redesigns using actual Figma exports. NewAvenue is freelance work by the sole designer. Owner-provided shots supplement the project galleries.
+There are 14 project stories: eight mobile products, four dashboards/SaaS products, and two websites. Tajwal and Simlo dashboards are independent projects linked to their mobile apps. Simlo and Tajwal histories show the original design and two redesigns using actual Figma exports. NewAvenue is freelance work by the sole designer. Owner-provided shots supplement the project galleries.
 
 UI icons are from the MIT-licensed Hugeicons free package; see `assets/icons/LICENSE.md`. The hero-based social preview is `assets/hero-share-v2.jpg`.
 
