@@ -1,11 +1,12 @@
 'use strict';
 // Apply a stored preference consistently across pages, with system preference as the default.
+const themeIsArabic=document.documentElement.lang==='ar';
 const themeButton = document.querySelector('.theme-toggle');
 const systemTheme = window.matchMedia('(prefers-color-scheme: dark)');
 const updateThemeButton = () => {
   const dark=document.documentElement.dataset.theme==='dark';
   themeButton?.setAttribute('aria-pressed',String(dark));
-  themeButton?.setAttribute('aria-label',`Switch to ${dark?'light':'dark'} mode`);
+  themeButton?.setAttribute('aria-label',themeIsArabic?(dark?'تفعيل الوضع الفاتح':'تفعيل الوضع الداكن'):`Switch to ${dark?'light':'dark'} mode`);
   document.querySelector('meta[name="theme-color"]')?.setAttribute('content',dark?'#141217':'#ffffff');
 };
 updateThemeButton();

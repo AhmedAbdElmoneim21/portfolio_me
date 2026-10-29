@@ -17,7 +17,7 @@ filters.forEach(button => button.addEventListener('click', () => {
     if (!card.hidden) count++;
   });
   const status = document.getElementById('filter-status');
-  if (status) status.textContent = `${count} projects shown`;
+  if (status) status.textContent = document.documentElement.lang==='ar'?`المشاريع المعروضة: ${new Intl.NumberFormat('ar-EG').format(count)}`:`${count} projects shown`;
   window.ScrollTrigger?.refresh();
 }));
 

@@ -1,25 +1,13 @@
 # Ahmed Abd Elmoneim portfolio
 
-Static HTML, CSS, and JavaScript portfolio served by GitHub Pages. No build step or API keys. Norsal is self-hosted from the owner-provided font files. GSAP and ScrollTrigger 3.13.0 load from jsDelivr; content stays visible if these scripts are unavailable.
+Static bilingual HTML/CSS/JavaScript portfolio deployed from GitHub to Vercel. No build step or API keys.
 
-## Preview
+English pages live at the root; Arabic equivalents live under `ar/`. The language switch keeps the same page. Norsal is self-hosted for English; Thmanyah Sans is self-hosted for Arabic, with RTL layout and native Arabic shaping. Theme preference is saved locally. GSAP/ScrollTrigger 3.13 provide progressive whole-element motion with reduced-motion support.
 
-Run `python3 -m http.server 8000` from the repository root and open http://localhost:8000.
+Run `python3 -m http.server 8000` from the repository root to preview.
 
-## Content
+There are 13 project stories: eight mobile products, four dashboards/SaaS products, and one website. Tajwal and Simlo dashboards are independent projects linked to their mobile apps. Simlo and Tajwal histories show the original design and two redesigns using actual Figma exports. NewAvenue is freelance work by the sole designer. Owner-provided shots supplement the project galleries.
 
-- `index.html`: home and selected work
-- `projects.html`: filterable project archive
-- `about.html`: current experience, background, and tools
-- `projects/`: individual project stories
-- `assets/projects/`: web-optimised covers exported from the owner-provided portfolio PDF
-- `CSS/style.css`: shared visual tokens, layout, responsive and reduced-motion styles
-- `js/main.js`: progressive enhancement for filters and cinematic whole-layer reveals, scroll composition, and pointer interactions
+UI icons are from the MIT-licensed Hugeicons free package; see `assets/icons/LICENSE.md`. The hero-based social preview is `assets/hero-share-v2.jpg`.
 
-The accent is set with `--accent` in CSS. Research findings, analytics usage, participant counts, and performance metrics should only be added after the owner provides real evidence. The stories describe interface scope and design rationale. Tajwal also includes owner-supplied annual registered-customer and SIM-sales totals, clearly separated from design impact; reporting years are unspecified. Historical cover status/date labels are part of the original artwork.
-
-Contact links and CV have been updated. No tracking scripts are installed.
-
-## Appearance
-
-The header theme toggle follows system preference on first visit and remembers an explicit choice. The owner-provided portrait is served as an optimised WebP.
+Research findings, analytics-tool experience, and performance claims require real evidence. Tajwal annual business totals are owner supplied, with reporting years unspecified; no causal redesign claim is made. Historical dates/statuses inside supplied artwork are preserved. No tracking scripts are installed.
